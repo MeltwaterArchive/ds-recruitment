@@ -1,4 +1,4 @@
-CXFLAGS =	-O2 -g -Wall -std=c++0x -fmessage-length=0 
+CXXFLAGS =	-O2 -g -Wall -std=c++0x -fmessage-length=0 
 
 OBJS =		stream_generator.o
 
@@ -7,7 +7,7 @@ LIBS =		-l boost_program_options -l boost_thread -l boost_system  -l zmq -l zmqp
 TARGET =	stream_generator
 
 $(TARGET):	$(OBJS)
-	$(CXX)  -o $(TARGET) $(OBJS) $(LIBS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
 
 all:	$(TARGET)
 
